@@ -1,0 +1,248 @@
+/* 전체 페이지 기본 설정 */
+body {
+    background-color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 100px 140px; /* 🔥 페이지 전체 여백 */
+    box-sizing: border-box;
+    max-width: 1920px;
+}
+
+.maintitle {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-title {
+    float: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: clamp(18px, 4vw, 37pt); 
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.right-title {
+    float: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: clamp(18px, 4vw, 37pt); 
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+#intro {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 150px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#title {
+    text-align: left; /* 왼쪽 정렬 */
+    margin-bottom: 40px; /* title과 article 사이 간격 */
+}
+
+#titlekr {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold; /* 볼드체 */
+    font-size: clamp(24px, 4vw, 48px); /* 모바일 24px ~ 데스크탑 48px */
+    margin-bottom: 10px; /* titleen과의 간격 */
+}
+
+#titlelinebox {
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 수직 정렬 */
+}
+
+#titleen {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-size: clamp(16px, 2vw, 32px); /* 모바일 16px ~ 데스크탑 32px */
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+#titleline {
+    border: none;
+    border-top: 2px solid black;
+    flex-grow: 1;
+}
+
+
+#article {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 150px;
+}
+
+#articlekr {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal; /* regular */
+    font-size: clamp(16px, 2.5vw, 24px);
+    line-height: 1.6;
+    color: black;
+    max-width: 800px;
+    min-width: 300px; /* 좁아지면 줄바꿈 */
+    text-align: justify;
+}
+
+#articleen {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500; /* medium */
+    font-size: clamp(12px, 1.5vw, 16px);
+    line-height: 1.6;
+    color: black;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+#rogo {
+    width: 100%;
+    max-width: 640px;
+    align-self: flex-end;
+    order: 3;
+    margin-top: 0px;
+    margin-left:auto;
+    margin-right:0;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+#rogo:hover {
+    filter: grayscale(0%);
+}
+
+#artworks{
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.artwork-group{
+    margin-bottom: 150px;
+    display: flex;
+}
+
+#image1c, #image3c {
+    filter: grayscale(100%);
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+#image2c {
+    filter: grayscale(100%);
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-right: auto;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+#image1c:hover, #image2c:hover, #image3c:hover {
+    filter: grayscale(0%); /* 마우스 올리면 컬러 */
+    transform: scale(1.05);
+}
+
+#artwork-group1 {
+    display: flex;
+    align-items: center;
+  gap: 30px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+}
+
+#artwork-group3 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+}
+
+#artwork-group2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+}
+
+#artwork-name1, #artwork-name3 {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center; /* 여백 중앙 */
+}
+
+#artwork-name2 {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.artwork-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artworknamekr {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+   font-size: clamp(16px, 3vw, 25px);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.artworknameen {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: normal;
+  font-size: clamp(14px, 2vw, 20px);
+  text-align: center;
+  letter-spacing: -0.05em;
+  margin-top: 0;
+}
+
+footer {
+    max-width: 1920px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footert {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold; /* bold */
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#footern {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: regular; /* regular */
+    font-size: 16px;
+}
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    

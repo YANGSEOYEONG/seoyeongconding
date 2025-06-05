@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8"/>
+        <title>박이소, 역사의 문</title>
+        <style>
+            body {
+                background-color: white;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 16px;
+                margin: 0 auto;
+                padding: 100px 140px; /* 🔥 페이지 전체 여백 */
+                box-sizing: border-box;
+                max-width: 1920px;
+            }
+
+.maintitle {
+    max-width: 1920px;
+    margin: 23px auto 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-title {
+    float: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: clamp(18px, 4vw, 37pt); 
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.right-title {
+    float: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: clamp(18px, 4vw, 37pt); 
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.clear {
+    clear: both;
+}
+           
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#intro {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#title {
+    text-align: left; /* 왼쪽 정렬 */
+    margin-bottom: 40px; /* title과 article 사이 간격 */
+}
+
+#titlekr {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold; /* 볼드체 */
+    font-size: clamp(24px, 4vw, 48px); /* 모바일 24px ~ 데스크탑 48px */
+    margin-bottom: 10px; /* titleen과의 간격 */
+}
+
+#titlelinebox {
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 수직 정렬 */
+}
+
+#titleen {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-size: clamp(16px, 2vw, 32px); /* 모바일 16px ~ 데스크탑 32px */
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+#titleline {
+    border: none;
+    border-top: 2px solid black;
+    flex-grow: 1;
+}
+
+#content{
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#article{
+    flex: 1 1 600px;
+    min-width: 300px;
+    margin-right: 100px;
+}
+
+#image { 
+    flex: 1 1 900px;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+}
+
+#artworkname {
+    margin-bottom: 40px; /* artworkname과 etc 사이 */
+}
+
+#artworknamekr {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px; /* artworknamekr과 artworknameen 사이 */
+}
+
+#artworknameen {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+}
+
+#etc {
+    margin-bottom: 40px; /* etc와 articlekr 사이 */
+}
+
+.material {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 5px 0; /* 줄 간격 */
+}
+
+#articlekr {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px; /* 행간 */
+    text-align: justify;
+}
+
+#button {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none; /* 밑줄 제거 */
+    display: inline-block;
+    margin-top: 40px; /* 버튼과 상단 간격 */
+}
+
+#button:hover {
+    text-decoration: underline; /* 마우스 올리면 밑줄 표시 */
+}
+
+
+            footer {
+                max-width: 1920px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            #footert {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-weight: bold; /* bold */
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            #footern {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-weight: regular; /* regular */
+                font-size: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+<header>
+  <a href="index.html">
+    <div class="maintitle">
+        <h1 class="left-title">백 투 더 퓨처:</h1>
+        <h1 class="right-title">한국 현대미술의 동시대성 탐험기</h1>
+        <div class="clear"></div>
+    </div>
+  </a>
+</header>
+    
+            <section id="intro">
+            <div id="title">
+                <p id="titlekr">시대 변환과 미술 지형 변동</p>
+                <div id="titlelinebox">
+                     <span id="titleen">A New Era of Diversion, and Paradigm Shift in Art</span>
+                     <hr id="titleline">
+                </div>
+            </div>
+            </section>
+        
+           <section id="content">
+                <div id="article">
+                        <div id="artworkname">
+                             <p id="artworknamekr"> 박이소, <역사의 문/역사적인 문>, 1987 </p>
+                                <p id="artworknameen">
+                                    BAHC Yiso, <i>Entrance of History</i>, 1987</p>
+                        </div>          
+
+                        <div id="etc">
+                                 <p class="material">캔버스에 아크릴릭 물감</p>
+                                <p class="material">181.4×187</p>
+                        </div>
+
+                          <div id="articlekr">
+                            <역사의 문/역사적인 문>(1987)에 나오는 토끼 형상은 다양한 아이디어 스케치와 작품에 반복적으로 등장한다. 그러나 이 형상이 의미하는 바는 명확치 않다. 혹자는 이것인 토끼 형상의 한반도를 의미한다고도 하고 혹자는 이것이 한국적 감수성의 ‘달토끼’라고도 해석하지만 박이소 자신이 그 의미를 정확히 밝힌 바는 없다.<br>
+
+                            <br> 한자 ‘門’을 거꾸로 세워서 마치 전통가옥의 싸립문처럼 배치해 놓은 화면 상단에 토끼 형상이 등장한다. 원작에는 그 위로 검은 플라스틱 밥솥이 걸려 있었는데 이것은 훗날 유실되었다.<br>
+
+                            <br>
+                            1987~1989년 작가의 작업 노트에는 ‘과학적’,‘비과학적’,‘감정적’,‘양심적’,‘상징적’,‘정치적’,‘비정치적’, 전통적, 비전통적 등 ‘~적’이라는 단어가 집중적으로 등장한다. 의미가 고정된 명사와 달리 형용사는 개인마다 상태와 정도를 다르게 느끼기 때문에 의미가 하나로 고정되지 않고 계속 미끄러진다. 역사조차도 ‘역사적’이라는 형용사로 변할 때 다양한 외부적 해석이 가능해 지는 동시에 그 의미의 전유의 가능성도 열린다.
+                          </div>
+
+                          <a href="ysy.html" id="button">&lt; 이전</a>
+
+                        </div>
+                                     <img id="image" src="images/image3.png" alt="박이소, 역사의 문">
+
+            </section>
+
+
+    
+        <footer>
+            <div id="footert">주최/후원</div>
+            <div id="footern">국립현대미술관</div>
+        </footer>
+    </body>
+</html>

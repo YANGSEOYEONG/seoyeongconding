@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8"/>
+        <title>시대 변환과 미술 지형 변동</title>
+        <link rel="stylesheet" href="ysystyle.css"/>
+    </head>
+
+    <body>
+
+<header>
+  <a href="index.html">
+    <div class="maintitle">
+        <h1 class="left-title">백 투 더 퓨처:</h1>
+        <h1 class="right-title">한국 현대미술의 동시대성 탐험기</h1>
+        <div class="clear"></div>
+    </div>
+  </a>
+</header>
+
+        <section id="intro">
+            <div id="title">
+                <p id="titlekr">시대 변환과 미술 지형 변동</p>
+                <div id="titlelinebox">
+                     <span id="titleen">A New Era of Diversion, and Paradigm Shift in Art</span>
+                     <hr id="titleline">
+                </div>
+            </div>
+
+
+            <div id="article">
+                <p id="articlekr">
+                            1990년대를 관통하여 2000년대로 이어지는 이 시기의 미술은 마치 지각변동과도 같은 전 세계적 체질 변화 상황과
+                이와 연관된 한국의 사회 환경을 그대로 흡수했다. 그래서 동시대 한국 현대미술은 보편적이면서 특징적이고, 전
+                세계적인 차원과 우리 사회 내적 맥락을 함께 고려할 때 제대로 이해할 수 있다.<br />
+                <br />‘동시대성'은
+                상황과 사태를 순차적이고 선형적인 시공간의 흐름으로 다루거나 인식하는 체계와는 다른 접근을 가능하게 하는
+                것으로, 복합적이고 뒤얽힌 시공간과 상황, 조건들을 수용하는 판단 가치와 관련되어 있다. 이와 같은 관점의
+                바탕이 되는 맥락을 당대 발현된 미술 행위들에서 확인하고자 한다. 이에 이번 전시의 시작점에서 우선 지난 5년간
+                미술관이 수집한 작품들 중 공성훈, 김범, 박이소, 이동기, 이용백, 최정화 등의 작품을 통해 한국 현대미술의
+                동시대적 양상의 형성이 의미하는 바를 살펴보고자 한다.
+                </p>
+
+
+                <p id="articleen">
+                    Art from the 1990s and 2000s reflected the monumental changes in the global constitution as well as related
+                developments in Korea’s social environment. Contemporary Korean art from this period was both universal and
+                specific and is only properly understood by taking the global dimension and internal contexts unique to
+                Korea into account.<br />
+                <br />“Contemporaneity” enables a deviation from the system that addresses or
+                perceives situations and states in terms of sequential and linear flows of time and space; it relates to
+                valuation that reflect times, places, situations, and conditions that are complex and entangled. By
+                considering the artistic practices of the time, the exhibition attempts to identify which contexts made such
+                perspectives possible. It begins by exhibiting the artworks of Kong Sunghun, Kim Beom, Bahc Yiso, Lee Dongi,
+                Lee Yongbaek, and Choi Jeonghwa, collected between 2018 and 2022, and a lens to better understand the
+                establishment of “contemporaneity” in Korean contemporary art.
+                </p>
+
+                 <img id="rogo" src="images/rogo.png" alt="로고">
+
+                 <audio id="mainsound" src="audio/audio1.mp3"></audio>
+
+            </div>
+</section>
+
+<section id="artworks">
+  <!-- 작품1 -->
+  <div id="artwork-group1">
+    <div id="artwork-name1" class="artwork-name">
+      <p class="artworknamekr">공성훈, <블라인드 작업>, 1992</p>
+      <p class="artworknameen">KONG Sunghun, <i>Blind-work</i>, 1992</p>
+    </div>
+    <a href="artwork1.html">
+      <img id="image1c" src="images/image1c.png" alt="공성훈, 블라인드작업">
+    </a>
+  </div>
+
+  <!-- 작품2 -->
+  <div id="artwork-group2">
+    <div id="artwork-name2" class="artwork-name">
+      <p class="artworknamekr">최정화, <내일의 꽃>, 2015</p>
+      <p class="artworknameen">CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</p>
+    </div>
+    <a href="artwork2.html">
+      <img id="image2c" src="images/image2c.png" alt="최정화, 내일의 꽃">
+    </a>
+  </div>
+
+  <!-- 작품3 -->
+  <div id="artwork-group3">
+    <div id="artwork-name3" class="artwork-name">
+      <p class="artworknamekr">박이소, <역사의 문/역사적인 문>, 2015</p>
+      <p class="artworknameen">BAHC Yiso, <i>Entrance of History</i>, 1987</p>
+    </div>
+    <a href="artwork3.html">
+      <img id="image3c" src="images/image3c.png" alt="박이소, 역사의 문">
+    </a>
+  </div>
+</section>
+
+        <footer>
+            <div id="footert">주최/후원</div>
+            <div id="footern">국립현대미술관</div>
+        </footer>
+
+
+
+
+
+
+
+
+<script>
+const rogo = document.getElementById('rogo');
+const audio = document.getElementById('mainsound');
+
+rogo.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play(); //
+    } else {
+        audio.pause(); //
+    }
+});
+</script>
+    </body>
+</html>
