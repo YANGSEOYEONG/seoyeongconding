@@ -43,6 +43,9 @@ a {
   font-size: clamp(18pt, 3vw, 37pt);
   font-weight: bold;
   flex: none;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 
@@ -202,9 +205,8 @@ a {
     width: 100%;
     max-width: 800px;
     margin-right: auto;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
     transform: scale(1);
+    transition: all 0.3s ease;
 }
 
 /* 이미지 마우스 호버 효과 */ 
@@ -280,30 +282,13 @@ a {
   align-items: center;
 }
 
-#artworknamekr1 {
+#artworknamekr1, #artworknamekr2, #artworknamekr3 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
   font-size: clamp(12pt, 1vw, 18pt);
   text-align: center;
   margin-bottom: 10px;
 }
-
-#artworknamekr2 {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: bold;
-  font-size: clamp(12pt, 1vw, 18pt);
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#artworknamekr3 {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: bold;
-  font-size: clamp(12pt, 1vw, 18pt);
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 
 .artworknameen {
   font-family: 'Noto Sans KR', sans-serif;
@@ -352,11 +337,17 @@ footer {
 @media screen and (max-width: 1440px) {
   body {
     padding: 0 60px;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   body {
     padding: 0 16px;
+    margin: 0 auto;
   }
+}
+
+html, body {
+  overflow-x: hidden;
 }
