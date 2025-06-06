@@ -285,7 +285,7 @@ a {
 #artworknamekr1, #artworknamekr2, #artworknamekr3 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
-  font-size: clamp(12pt, 1vw, 18pt);
+  font-size: clamp(18pt, 1.5vw, 20pt);
   text-align: center;
   margin-bottom: 10px;
 }
@@ -293,7 +293,7 @@ a {
 .artworknameen {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: normal;
-  font-size: clamp(10pt, 1vw, 16pt);
+  font-size: clamp(10pt, 1.2vw, 16pt);
   text-align: center;
   letter-spacing: -0.05em;
   margin-top: 0;
