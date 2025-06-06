@@ -1,122 +1,156 @@
-/* 전체 페이지 기본 설정 */
 body {
-    background-color: white;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 16px;
-    margin: 0 auto;
-    padding: 100px 140px; /* 🔥 페이지 전체 여백 */
-    box-sizing: border-box;
-    max-width: 1920px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 140px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12pt;
 }
 
-.maintitle {
-    max-width: 1920px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+/* 마우스 호버효과 없애기 */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.left-title {
-    float: left;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: clamp(18px, 4vw, 37pt); 
-    white-space: nowrap;
-    overflow:hidden;
+/* 다크모드 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color:#a9a9a9;
+  }
+
+  #titleline {
+    background-color: #a9a9a9 !important;
 }
 
-.right-title {
-    float: right;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: clamp(18px, 4vw, 37pt); 
-    white-space: nowrap;
-    overflow:hidden;
+  #articleen {
+    color: #7c7c7c !important;
 }
 
-.clear {
-    clear: both;
 }
 
-#intro {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 150px;
-    padding: 0px;
-    box-sizing: border-box;
+
+/* header */ 
+#head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1640px;
+  margin: 23px auto 0 auto;
 }
 
+#lefttext, #righttext {
+  font-size: clamp(18pt, 3vw, 37pt);
+  font-weight: bold;
+  flex: none;
+}
+
+
+/* 본문 박스 */
+#mainbox {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+/* title */
 #title {
-    text-align: left; /* 왼쪽 정렬 */
-    margin-bottom: 40px; /* title과 article 사이 간격 */
+    margin-top: 64px;
+    margin-bottom: 40px;
 }
 
 #titlekr {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold; /* 볼드체 */
-    font-size: clamp(24px, 4vw, 48px); /* 모바일 24px ~ 데스크탑 48px */
-    margin-bottom: 10px; /* titleen과의 간격 */
+  font-size: clamp(15pt, 3vw, 25pt);
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
 }
 
 #titlelinebox {
-    display: flex; /* 가로 정렬 */
-    align-items: center; /* 수직 정렬 */
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 #titleen {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: normal;
-    font-size: clamp(16px, 2vw, 32px); /* 모바일 16px ~ 데스크탑 32px */
-    white-space: nowrap;
-    margin-right: 20px;
+  font-size: clamp(13.5pt, 2.5vw, 20pt);
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-top: -5px;
 }
 
 #titleline {
-    border: none;
-    border-top: 2px solid black;
-    flex-grow: 1;
+  flex-grow: 1;
+  height: 1.5px;
+  background-color: black;
 }
 
-
+/* 글 */
 #article {
     display: flex;
-    gap: 70px;
     flex-wrap: wrap;
     align-items: flex-start;
     width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 150px;
+    max-width: 1440px;
+    gap: 30px;
+}
+
+#articleleft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1 1 50%;
+  min-width: 100px;
 }
 
 #articlekr {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: normal; /* regular */
-    font-size: clamp(16px, 2.5vw, 24px);
-    line-height: 1.6;
-    color: black;
-    max-width: 800px;
-    min-width: 300px; /* 좁아지면 줄바꿈 */
+   font-size: clamp(16px, 2vw, 20pt);
+    font-weight: 500;
     text-align: justify;
+    letter-spacing: -0.015em;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex: 1 1 60%;
+    max-width: 800px;
 }
 
 #articleen {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500; /* medium */
-    font-size: clamp(12px, 1.5vw, 16px);
-    line-height: 1.6;
-    color: black;
-    max-width: 600px;
-    min-width: 300px;
+      display: block;
+      font-size: clamp(14px, 1.8vw, 18pt);
+      font-family: Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: -0.015em;
+      flex: 1 1 40%;
+      max-width: 600px;
+      color: #454545;
 }
+
+@media screen and (max-width: 768px) {
+  #article {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #articleleft,
+  #articleen {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+} 
 
 #rogo {
     width: 100%;
-    max-width: 640px;
+    max-width: 150px;
     align-self: flex-end;
     order: 3;
     margin-top: 0px;
     margin-left:auto;
-    margin-right:0;
+    margin-right:15px;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
@@ -125,10 +159,24 @@ body {
     filter: grayscale(0%);
 }
 
+#audioguide {
+  align-items: center;
+}
+
+#audiotext {
+  font-size: clamp(9pt, 1.1vw, 12pt);
+  font-weight: 500;
+  color: #555;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-right: 15px;
+}
+
+
+/* 작품 설명 시작 */
 #artworks{
     width: 100%;
-    padding: 0;
-    box-sizing: border-box;
+    margin-top: 70px;
+    margin-bottom: 100px;
 }
 
 .artwork-group{
@@ -140,6 +188,7 @@ body {
     filter: grayscale(100%);
     display: block;
     height: auto;
+    max-width: 800px;
     width: 100%;
     margin-left: auto;
     transition: all 0.3s ease;
@@ -151,21 +200,48 @@ body {
     display: block;
     height: auto;
     width: 100%;
+    max-width: 800px;
     margin-right: auto;
     transform: scale(1.05);
     transition: all 0.3s ease;
     transform: scale(1);
 }
 
-#image1c:hover, #image2c:hover, #image3c:hover {
-    filter: grayscale(0%); /* 마우스 올리면 컬러 */
+/* 이미지 마우스 호버 효과 */ 
+#image1c:hover {
+    filter: grayscale(0%); 
     transform: scale(1.05);
+}
+
+#image2c:hover {
+    filter: grayscale(0%); 
+    transform: scale(1.05);
+
+}
+#image3c:hover {
+    filter: grayscale(0%); 
+    transform: scale(1.05);
+}
+
+#artworknamekr1:hover {
+  transform: scale(1.03);
+  text-decoration: underline;
+}
+
+#artworknamekr2:hover {
+  transform: scale(1.03);
+  text-decoration: underline;
+}
+
+#artworknamekr3:hover {
+  transform: scale(1.03);
+  text-decoration: underline;
 }
 
 #artwork-group1 {
     display: flex;
     align-items: center;
-  gap: 30px;
+    gap: 30px;
     margin-bottom: 150px;
     flex-wrap: wrap;
 }
@@ -174,7 +250,6 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 150px;
     flex-wrap: wrap;
 }
 
@@ -190,7 +265,7 @@ body {
 #artwork-name1, #artwork-name3 {
     flex: 1 1 300px;
     display: flex;
-    justify-content: center; /* 여백 중앙 */
+    justify-content: center; 
 }
 
 #artwork-name2 {
@@ -205,44 +280,83 @@ body {
   align-items: center;
 }
 
-.artworknamekr {
+#artworknamekr1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
-   font-size: clamp(16px, 3vw, 25px);
+  font-size: clamp(12pt, 1vw, 18pt);
   text-align: center;
   margin-bottom: 10px;
 }
 
+#artworknamekr2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: clamp(12pt, 1vw, 18pt);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#artworknamekr3 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: clamp(12pt, 1vw, 18pt);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
 .artworknameen {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: normal;
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(10pt, 1vw, 16pt);
   text-align: center;
   letter-spacing: -0.05em;
   margin-top: 0;
 }
 
+
+/* 하단 정보글 */
+
 footer {
     max-width: 1920px;
-    margin: 0 auto;
+    margin-top: 300px;
+    margin-bottom: 23px;
     text-align: center;
 }
 
-#footert {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold; /* bold */
-    font-size: 16px;
-    margin-bottom: 10px;
+#footertitle{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: clamp(10pt, 1vw, 16pt);
+
 }
 
-#footern {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: regular; /* regular */
-    font-size: 16px;
+#name {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: regular;
+  font-size: 12pt;
+  margin-top: 8px;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    
+#name > #ysy{
+  font-size: 14pt;
+  line-height: 1;
+  text-decoration: underline;
+} 
+
+
+@media screen and (max-width: 1440px) {
+  body {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 16px;
+  }
+}

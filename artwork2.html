@@ -1,241 +1,273 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta charset="utf-8"/>
-        <title>최정화, 내일의 꽃</title>
-        <style>
-            body {
-                background-color: white;
-                font-family: 'Noto Sans KR', sans-serif;
-                font-size: 16px;
-                margin: 0 auto;
-                padding: 100px 140px; /* 🔥 페이지 전체 여백 */
-                box-sizing: border-box;
-                max-width: 1920px;
-            }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>최정화, 내일의 꽃</title>
+  <style>
+      body {
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 140px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12pt;
+    }
 
- .maintitle {
+      /* 마우스 호버효과 없애기 */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* 다크모드 */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #111;
+          color:#a9a9a9;
+        }
+
+        #titleline {
+          background-color: #a9a9a9 !important;
+      }
+
+        #articleen {
+          color: #7c7c7c !important;
+      }
+
+      }
+
+
+/* header */ 
+#head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1640px;
+  margin: 23px auto 0 auto;
+}
+
+#lefttext, #righttext {
+  font-size: clamp(18pt, 3vw, 37pt);
+  font-weight: bold;
+  flex: none;
+}
+
+
+/* 본문 박스 */
+#mainbox {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+    /* title */ 
+    #titlekr {
+      font-size: clamp(15pt, 3vw, 25pt);
+      font-weight: bold;
+      line-height: 1.4;
+      letter-spacing: -0.02em;
+      margin-top: 64px;
+      margin-bottom: 0;
+    }
+
+    #titlelinebox {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    #titleen {
+      font-size: clamp(14pt, 2.5vw, 20pt);
+      font-weight: 500;
+      font-family: Helvetica, sans-serif;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+      margin-top: -5px;
+    }
+
+    #titleline {
+      flex-grow: 1;
+      height: 1.5px;
+      background-color: black;
+      margin: 0;
+      position: relative;
+    }
+
+    #title {
+      margin-bottom: 40px;
+    }
+
+    /* 내용 */ 
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 100px;
+    }
+
+        #article {
+          flex: 1 1 600px;
+          margin-right: 100px;
+        }
+
+        #image {
+          flex: 1 1 1200px;
+          max-width: 600px;
+          width: 100%;
+          height: auto;
+          align-self: center;
+          display: block;
+        }
+
+        #artworkname {
+          margin-bottom: 40px;
+        }
+
+        #artworknamekr {
+          font-weight: bold;
+          font-size: clamp(16pt, 3vw, 22pt);
+          margin-bottom: 10px;
+        }
+
+        #artworknameen {
+          font-weight: normal;
+          font-size: clamp(12pt, 3vw, 16pt);
+          margin: 0;
+        }
+
+        #etc {
+          margin-bottom: 40px;
+        }
+
+        .material {
+          font-weight: normal;
+          font-size: clamp(10pt, 1.8vw, 18pt);
+          line-height: 1;
+        }
+
+        #articlekr {
+          font-size: clamp(12pt, 2vw, 20pt);
+          font-weight: 500;
+          text-align: justify;
+          letter-spacing: -0.015em;
+          line-height: 1.6;
+          margin-top: 0;
+          margin-bottom: 20px;
+          flex: 1 1 60%;
+        }
+
+        #button {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: clamp(10pt, 1.8vw, 18pt);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        #button:hover {
+          text-decoration: underline;
+        }
+
+/* 하단 css */ 
+footer {
     max-width: 1920px;
-    margin: 23px auto 0 auto;
-    position: relative;
-    overflow: hidden;
+    margin-top: 300px;
+    margin-bottom: 23px;
+    text-align: center;
 }
 
-.left-title {
-    float: left;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: clamp(18px, 4vw, 37pt); 
-    white-space: nowrap;
-    overflow:hidden;
+#footertitle{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: clamp(10pt, 1vw, 16pt);
 }
 
-.right-title {
-    float: right;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: clamp(18px, 4vw, 37pt); 
-    white-space: nowrap;
-    overflow:hidden;
+#name {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: regular;
+  font-size: 12pt;
+  margin-top: 8px;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.clear {
-    clear: both;
+#name > #ysy{
+  font-size: 14pt;
+  line-height: 1;
+  text-decoration: underline;
+} 
+
+@media screen and (max-width: 1440px) {
+  body {
+    padding: 0 60px;
+  }
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 16px;
+  }
 }
 
-
-#intro {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 100px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-#title {
-    text-align: left; /* 왼쪽 정렬 */
-    margin-bottom: 40px; /* title과 article 사이 간격 */
-}
-
-#titlekr {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold; /* 볼드체 */
-    font-size: clamp(24px, 4vw, 48px); /* 모바일 24px ~ 데스크탑 48px */
-    margin-bottom: 10px; /* titleen과의 간격 */
-}
-
-#titlelinebox {
-    display: flex; /* 가로 정렬 */
-    align-items: center; /* 수직 정렬 */
-}
-
-#titleen {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: normal;
-    font-size: clamp(16px, 2vw, 32px); /* 모바일 16px ~ 데스크탑 32px */
-    white-space: nowrap;
-    margin-right: 20px;
-}
-
-#titleline {
-    border: none;
-    border-top: 2px solid black;
-    flex-grow: 1;
-}
-
-#content{
-    max-width: 1920px;
-    margin: 0 auto;
-    margin-bottom: 150px;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-#article{
-    flex: 1 1 600px;
-    min-width: 300px;
-    margin-right: 100px;
-}
-
-#image { 
-    flex: 1 1 900px;
-    max-width: 900px;
-    width: 100%;
-    height: auto;
-}
-
-#artworkname {
-    margin-bottom: 40px; /* artworkname과 etc 사이 */
-}
-
-#artworknamekr {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 10px; /* artworknamekr과 artworknameen 사이 */
-}
-
-#artworknameen {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: normal;
-    font-size: 20px;
-    margin: 0;
-}
-
-#etc {
-    margin-bottom: 40px; /* etc와 articlekr 사이 */
-}
-
-.material {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    margin: 5px 0; /* 줄 간격 */
-}
-
-#articlekr {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 30px; /* 행간 */
-    text-align: justify;
-}
-
-#button {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 20px;
-    color: black;
-    text-decoration: none; /* 밑줄 제거 */
-    display: inline-block;
-    margin-top: 40px; /* 버튼과 상단 간격 */
-}
-
-#button:hover {
-    text-decoration: underline; /* 마우스 올리면 밑줄 표시 */
-}
+  </style>
+</head>
 
 
-            footer {
-                max-width: 1920px;
-                margin: 0 auto;
-                text-align: center;
-            }
+<body>
+  <header>
+    <a href="index.html">
+      <div id="head">
+        <div id="lefttext">백 투 더 퓨쳐:</div>
+        <div id="righttext">한국 현대문화의 동시대성 탐험기</div>
+      </div>
+    </a>
+  </header>
 
-            #footert {
-                font-family: 'Noto Sans KR', sans-serif;
-                font-weight: bold; /* bold */
-                font-size: 16px;
-                margin-bottom: 10px;
-            }
+  <section id="mainbox">
+          <section id="title">
+              <div id="titlekr">시대 변화과 문화 지형 변동</div>
+              <div id="titlelinebox">
+                  <span id="titleen">A New Era of Diversion, and Paradigm Shift in Art</span>
+                  <div id="titleline"></div>
+              </div>
+          </section>
 
-            #footern {
-                font-family: 'Noto Sans KR', sans-serif;
-                font-weight: regular; /* regular */
-                font-size: 16px;
-            }
-        </style>
-    </head>
-
-    <body>
-
-<header>
-  <a href="index.html">
-    <div class="maintitle">
-        <h1 class="left-title">백 투 더 퓨처:</h1>
-        <h1 class="right-title">한국 현대미술의 동시대성 탐험기</h1>
-        <div class="clear"></div>
-    </div>
-  </a>
-</header>
-    
-            <section id="intro">
-            <div id="title">
-                <p id="titlekr">시대 변환과 미술 지형 변동</p>
-                <div id="titlelinebox">
-                     <span id="titleen">A New Era of Diversion, and Paradigm Shift in Art</span>
-                     <hr id="titleline">
-                </div>
-            </div>
-            </section>
-        
-           <section id="content">
+          <section id="content">
                 <div id="article">
-                        <div id="artworkname">
-                             <p id="artworknamekr"> 최정화, <내일의 꽃>, 2015 </p>
-                                <p id="artworknameen">
-                                    CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</p>
-                        </div>          
+                    <div id="artworkname">
+                      <p id="artworknamekr">최정화, <내일의 꽃>, 2015</p>
+                      <p id="artworknameen"> CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</p>
+                  </div>
 
-                        <div id="etc">
-                                 <p class="material">섬유, FRP, 고무, 우레아, 철 분말</p>
-                                <p class="material">163.5×130×128, 220×203×188, 114×96×111, 161×120×104, 201×130×133, 230×114×128, 69×208×208, 132×130×129, 248×171×149, 230×147×156, 199×68×76, 155×60×35, 143×48×47</p>
-                        </div>
+                  <div id="etc">
+                    <p class="material">섬유, FRP, 고무, 우레아, 철 분말</p>
+                    <p class="material">163.5×130×128, 220×203×188, 114×96×111, 161×120×104, 201×130×133, 230×114×128, 69×208×208, 132×130×129, 248×171×149, 230×147×156, 199×68×76, 155×60×35, 143×48×47</p>
+                  </div>
 
-                          <div id="articlekr">
-                            <내일의 꽃>은 우리 생활공간에서 쉽게 볼 수 있는 인조 수목과 화분에 도료 코팅을 한 작업으로 철가루로 뒤덮인 시든 꽃들과 형광색으로 피어난 꽃들이 대조를 이룬다.<br>
+                  <div id="articlekr">
+                      <p> <내일의 꽃>은 우리 생활공간에서 쉽게 볼 수 있는 인조 수목과 화분에 도료 코팅을 한 작업으로 철가루로 뒤덮인 시든 꽃들과 형광색으로 피어난 꽃들이 대조를 이룬다.</p>
+                      <p> 작가는 이 작품에서 살아있는 식물의 피고 지는 모습을 인조 식물로 표현하며 생과 사의 어김없는 이치를 거스를 수 없음을 담아내고 있다. </p>
+                  </div>
 
-                            <br> 작가는 이 작품에서 살아있는 식물의 피고 지는 모습을 인조 식물로 표현하며 생과 사의 어김없는 이치를 거스를 수 없음을 담아내고 있다. 
-                          </div>
+                  <a href="index.html" id="button">&lt; 이전</a>
 
-                          <a href="index.html" id="button">&lt; 이전</a>
+                </div>
 
-                        </div>
-                                     <img id="image" src="images/image2.png" alt="최정화, 내일의 꽃">
+                <img id="image" src="images/image2.png" alt="최정화, 내일의 꽃">
+          </section>
 
-            </section>
-
-
-    
-        <footer>
-            <div id="footert">주최/후원</div>
-            <div id="footern">국립현대미술관</div>
-        </footer>
-    </body>
+              <footer>
+                  <div id="footertitle">제작</div>
+                  <div id="name">
+                    <div id="cwj">최우진</div>
+                    <div id="ysy">양서영</div>
+                    <div id="ssz">손승재</div>
+                    <div id="psg">박석근</div>
+                    <div id="jhj">전휘재</div>
+                  </div>
+              </footer>
+  </section>
+</body>
 </html>
