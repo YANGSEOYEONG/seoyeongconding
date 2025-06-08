@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <title>박이소, 역사의 문</title>
   <style>
-    body {
+   body {
       max-width: 1920px;
       font-family: sans-serif;
       color: black;
-      margin-bottom: 100px;
-      margin:0 20px;
+      padding: 0 100px;
+      margin: 0 auto;
     }
 
 /* 마우스 호버효과 없애기 */
@@ -34,7 +34,7 @@ a {
 
     /* header */ 
     .header 
-        { max-width: 1640px;    /* 제목 여백 설정 */
+        { 
           margin-top: 23px;   /* 제목 상단 여백 */
           margin-left: auto;    /* 좌우 여백 */
           margin-right: auto;   /* 좌우 여백 */
@@ -51,10 +51,8 @@ a {
 
 /* 본문 박스 */
 #mainbox {
-      max-width: 1440px;
+      padding: 0 50px;
       margin: 0 auto;
-      padding-left: 20px;
-      padding-right: 20pt;
 }
 
 
@@ -95,28 +93,21 @@ a {
 
     /* 내용 */ 
     #content {
-      display: flex;
-      flex-wrap: wrap;
       width: 100%;
       align-items: flex-start;
       margin-top: 0;
       margin-bottom: 100px;
-      max-width: 1440px;
       gap: 40px;
     }
 
-        #article {
-          flex: 1 1 40%;
-        }
-
         #image {
-          flex: 1 1 60%;
           max-width: 700px;
           width: 100%;
           height: auto;
           display: block;
           margin: 0 auto;
           align-self: center;
+          min-width: 0;
         }
 
         #artworkname {
@@ -125,14 +116,12 @@ a {
 
         #artworknamekr {
           font-weight: bold;
-          font-size: clamp(16pt, 3vw, 22pt);
-          margin-left: 50px;
+          font-size: clamp(16pt, 3vw, 18pt);
         }
 
         #artworknameen {
           font-weight: normal;
           font-size: clamp(12pt, 3vw, 16pt);
-          margin-left: 50px;
         }
 
         #etc {
@@ -141,12 +130,14 @@ a {
 
         .material {
           font-weight: normal;
-          font-size: clamp(10pt, 1.8vw, 13pt);
+          font-size: clamp(8pt, 1.8vw, 10pt);
           line-height: 1.3;
+          max-width: 700px;
+          margin: 0 auto;
         }
 
         #articlekr {
-          font-size: clamp(16px, 2vw, 20pt);
+          font-size: clamp(15px, 2vw, 17pt);
           font-weight: 500;
           text-align: justify;
           letter-spacing: -0.015em;
@@ -171,7 +162,6 @@ a {
 
 /* 하단 css */ 
 footer {
-    max-width: 1920px;
     margin-top: 300px;
     margin-bottom: 23px;
     text-align: center;
@@ -199,6 +189,13 @@ footer {
   line-height: 1;
   text-decoration: underline;
 } 
+
+  @media screen and (max-width: 768px) {
+  body {
+    margin: 0 20px;
+  }
+
+}
 
   </style>
 </head>
@@ -232,14 +229,17 @@ footer {
 
         <section id="content">
                 <div id="article">
-                      <div id="artworkname">
-                        <div id="artworknamekr">박이소, <역사의 문/역사적인 문>, 1987</div>
-                        <div id="artworknameen"> BAHC Yiso, <i>Entrance of History</i>, 1987</div>
-                      </div>
+
+                <img id="image" src="images/image3.png" alt="박이소, 역사의 문">
 
                       <div id="etc">
                         <div class="material">캔버스에 아크릴릭 물감</div>
                         <div class="material">181.4×187</div>
+                      </div>
+
+                      <div id="artworkname">
+                        <div id="artworknamekr">박이소, <역사의 문/역사적인 문>, 1987</div>
+                        <div id="artworknameen"> BAHC Yiso, <i>Entrance of History</i>, 1987</div>
                       </div>
 
                       <div id="articlekr">
@@ -250,7 +250,7 @@ footer {
 
                       <a href="index.html" id="button">&lt; 이전</a>
                   </div>
-                <img id="image" src="images/image3.png" alt="박이소, 역사의 문">
+
         </section>
 
             <footer>

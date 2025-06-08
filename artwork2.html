@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <title>최정화, 내일의 꽃</title>
   <style>
-    body {
+   body {
       max-width: 1920px;
       font-family: sans-serif;
       color: black;
-      margin-bottom: 100px;
-      margin:0 20px;
+      padding: 0 100px;
+      margin: 0 auto;
     }
 
 /* 마우스 호버효과 없애기 */
@@ -34,7 +34,7 @@ a {
 
     /* header */ 
     .header 
-        { max-width: 1640px;    /* 제목 여백 설정 */
+        { 
           margin-top: 23px;   /* 제목 상단 여백 */
           margin-left: auto;    /* 좌우 여백 */
           margin-right: auto;   /* 좌우 여백 */
@@ -51,10 +51,8 @@ a {
 
 /* 본문 박스 */
 #mainbox {
-      max-width: 1440px;
+      padding: 0 50px;
       margin: 0 auto;
-      padding-left: 20px;
-      padding-right: 20pt;
 }
 
 
@@ -95,28 +93,21 @@ a {
 
     /* 내용 */ 
     #content {
-      display: flex;
-      flex-wrap: wrap;
       width: 100%;
       align-items: flex-start;
       margin-top: 0;
       margin-bottom: 100px;
-      max-width: 1440px;
       gap: 40px;
     }
 
-        #article {
-          flex: 1 1 40%;
-        }
-
         #image {
-          flex: 1 1 60%;
           max-width: 700px;
           width: 100%;
           height: auto;
           display: block;
           margin: 0 auto;
           align-self: center;
+          min-width: 0;
         }
 
         #artworkname {
@@ -125,14 +116,12 @@ a {
 
         #artworknamekr {
           font-weight: bold;
-          font-size: clamp(16pt, 3vw, 22pt);
-          margin-left: 50px;
+          font-size: clamp(16pt, 3vw, 18pt);
         }
 
         #artworknameen {
           font-weight: normal;
           font-size: clamp(12pt, 3vw, 16pt);
-          margin-left: 50px;
         }
 
         #etc {
@@ -141,12 +130,14 @@ a {
 
         .material {
           font-weight: normal;
-          font-size: clamp(10pt, 1.8vw, 13pt);
+          font-size: clamp(8pt, 1.8vw, 10pt);
           line-height: 1.3;
+          max-width: 700px;
+          margin: 0 auto;
         }
 
         #articlekr {
-          font-size: clamp(16px, 2vw, 20pt);
+          font-size: clamp(15px, 2vw, 17pt);
           font-weight: 500;
           text-align: justify;
           letter-spacing: -0.015em;
@@ -171,7 +162,6 @@ a {
 
 /* 하단 css */ 
 footer {
-    max-width: 1920px;
     margin-top: 300px;
     margin-bottom: 23px;
     text-align: center;
@@ -199,6 +189,13 @@ footer {
   line-height: 1;
   text-decoration: underline;
 } 
+
+  @media screen and (max-width: 768px) {
+  body {
+    margin: 0 20px;
+  }
+
+}
 
   </style>
 </head>
@@ -232,15 +229,18 @@ footer {
 
           <section id="content">
                 <div id="article">
+                    <img id="image" src="images/image2.png" alt="최정화, 내일의 꽃">
+
+                                      <div id="etc">
+                    <div class="material">섬유, FRP, 고무, 우레아, 철 분말</div>
+                    <div class="material">163.5×130×128, 220×203×188, 114×96×111, 161×120×104, 201×130×133, 230×114×128, 69×208×208, 132×130×129, 248×171×149, 230×147×156, 199×68×76, 155×60×35, 143×48×47</div>
+                  </div>
+
                     <div id="artworkname">
                       <div id="artworknamekr">최정화, <내일의 꽃>, 2015</div>
                       <div id="artworknameen"> CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</div>
                   </div>
 
-                  <div id="etc">
-                    <div class="material">섬유, FRP, 고무, 우레아, 철 분말</div>
-                    <div class="material">163.5×130×128, 220×203×188, 114×96×111, 161×120×104, 201×130×133, 230×114×128, 69×208×208, 132×130×129, 248×171×149, 230×147×156, 199×68×76, 155×60×35, 143×48×47</div>
-                  </div>
 
                   <div id="articlekr">
                       <p> <내일의 꽃>은 우리 생활공간에서 쉽게 볼 수 있는 인조 수목과 화분에 도료 코팅을 한 작업으로 철가루로 뒤덮인 시든 꽃들과 형광색으로 피어난 꽃들이 대조를 이룬다.</p>
@@ -251,7 +251,6 @@ footer {
 
                 </div>
 
-                <img id="image" src="images/image2.png" alt="최정화, 내일의 꽃">
           </section>
 
               <footer>

@@ -1,8 +1,9 @@
    body {
-      max-width: 1920px;
+    max-width: 1920px;
+    padding: 0 100px;
+    margin: 0 auto;
       font-family: sans-serif;
       color: black;
-      margin-bottom: 100px;
     }
 
 /* 마우스 호버효과 없애기 */
@@ -22,15 +23,18 @@ a {
     background-color: #a9a9a9 !important;
 }
 
+                #articleen { 
+                  color: #7c7c7c !important;
+                }
+
 }
 
 
     /* header */ 
     .header 
-        { max-width: 1640px;    /* 제목 여백 설정 */
-          margin-top: 23px;   /* 제목 상단 여백 */
-          margin-left: auto;    /* 좌우 여백 */
-          margin-right: auto;   /* 좌우 여백 */
+        { margin-top: 23px;   /* 제목 상단 여백 */
+          margin-left: auto;
+          margin-right:auto;
           overflow: hidden;
         }
 
@@ -44,10 +48,8 @@ a {
 
 /* 본문 박스 */
 #mainbox {
-      max-width: 1440px;
+      padding: 0 50px;
       margin: 0 auto;
-      padding-left: 20px;
-      padding-right: 20pt;
 }
 
 
@@ -92,7 +94,6 @@ a {
     flex-wrap: wrap;
     align-items: flex-start;
     width: 100%;
-    max-width: 1440px;
     gap: 30px;
 }
 
@@ -164,7 +165,7 @@ a {
     filter: grayscale(100%);
     display: block;
     height: auto;
-    max-width: 800px;
+    max-width: 700px;
     width: 100%;
     margin-left: auto;
     transition: all 0.3s ease;
@@ -176,7 +177,7 @@ a {
     display: block;
     height: auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin-right: auto;
     transform: scale(1);
     transition: all 0.3s ease;
@@ -217,16 +218,10 @@ a {
     flex-wrap: wrap;
 }
 
-#artwork-name1, #artwork-name3 {
+#artwork-name1, #artwork-name2, #artwork-name3 {
     flex: 1 1 300px;
     display: flex;
     justify-content: center; 
-}
-
-#artwork-name2 {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
 }
 
 .artwork-name {
@@ -237,14 +232,14 @@ a {
 
 #artworknamekr1, #artworknamekr2, #artworknamekr3 {
   font-weight: bold;
-  font-size: clamp(13pt, 3vw, 20pt);
+  font-size: clamp(13pt, 3vw, 16pt);
   text-align: center;
   margin-bottom: 10px;
 }
 
 .artworknameen {
   font-weight: normal;
-  font-size: clamp(10pt, 1.2vw, 16pt);
+  font-size: clamp(10pt, 2vw, 14pt);
   text-align: center;
   letter-spacing: -0.05em;
   margin-top: 0;
@@ -254,7 +249,7 @@ a {
 /* 하단 정보글 */
 
 footer {
-    max-width: 1920px;
+  margin: 0 auto;
     margin-top: 300px;
     margin-bottom: 23px;
     text-align: center;
@@ -287,22 +282,20 @@ footer {
     padding: 0 20px;
   }
 
-    #head {
+  #article {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    gap: 40px; /* 좌우 간격 대신 위아래 간격 */
   }
 
-    #article {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  #articleleft, #articleen {
+  #articleleft, 
+  #articleen {
     max-width: 100%;
-    flex: 1 1 100%;
+    align-items: flex-start; /* 왼쪽 정렬 */
   }
 
+  #articleen {
+    margin-top: 20px;
+  }
 }
 
 html, body {
