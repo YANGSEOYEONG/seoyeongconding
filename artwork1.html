@@ -1,97 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
   <title>공성훈, 블라인드작업</title>
   <style>
-    body {
+   body {
+      max-width: 1920px;
       font-family: sans-serif;
       color: black;
       margin-bottom: 100px;
-      padding-left: 20px;
-      padding-right: 20px;
     }
 
-      /* 마우스 호버효과 없애기 */
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
+/* 마우스 호버효과 없애기 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-      /* 다크모드 */
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #111;
-          color:#a9a9a9;
+/* 다크모드 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color:#a9a9a9;
+  }
+
+  #titleline {
+    background-color: #a9a9a9 !important;
+}
+
+}
+
+
+    /* header */ 
+    .header 
+        { max-width: 1640px;    /* 제목 여백 설정 */
+          margin-top: 23px;   /* 제목 상단 여백 */
+          margin-left: auto;    /* 좌우 여백 */
+          margin-right: auto;   /* 좌우 여백 */
+          overflow: hidden;
         }
 
-        #titleline {
-          background-color: #a9a9a9 !important;
-      }
-
-        #articleen {
-          color: #7c7c7c !important;
-      }
-
-      }
-
-
-/* header */ 
-.header 
-    { max-width: 1640px;    /* 제목 여백 설정 */
-      margin-top: 23px;   /* 제목 상단 여백 */
-      margin-left: auto;    /* 좌우 여백 */
-      margin-right: auto;   /* 좌우 여백 */
+    h1 {
+      font-size: clamp(24px, 4vw, 34pt);
+      font-weight: bold;
+      letter-spacing: -0.02em;
+      margin: 0;
     }
 
-h1, #lefttext, #righttext {
-  font-size: clamp(24px, 4vw, 34pt);
-  font-weight: bold;
-  letter-spacing: -0.02em;
-  margin: 0;
-}
 
 /* 본문 박스 */
 #mainbox {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20pt;
 }
 
-    /* title */
-    #title {
-        margin-top: 64px;
-        margin-bottom: 40px;
-    }
 
-    #titlekr {
+/* title */
+#title {
+    margin-top: 64px;
+    margin-bottom: 70px;
+}
+
+#titlekr {
       font-size: clamp(20px, 3vw, 25pt);
       font-weight: bold;
-      line-height: 1.4;
       letter-spacing: -0.02em;
-    }
+      margin-top: 64px;
+      margin-bottom: 0;
+}
 
-    #titlelinebox {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
+#titlelinebox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-    #titleen {
+#titleen {
       font-size: clamp(18px, 2.5vw, 20pt);
       font-weight: 500;
       font-family: Helvetica, sans-serif;
-      line-height: 1.5;
       letter-spacing: -0.02em;
-      margin-top: -5px;
-    }
+      margin-top: 5px;
+      margin-bottom: 0;
+}
 
-    #titleline {
-      flex-grow: 1; /* 남은 공간 채우기 */
-      height: 1.5px;
-      background-color: black;
-    }
+#titleline {
+  flex-grow: 1; /* 남은 공간 채우기 */
+  height: 1.5px;
+  background-color: black;
+}
 
     /* 내용 */ 
     #content {
@@ -111,11 +110,12 @@ h1, #lefttext, #righttext {
 
         #image {
           flex: 1 1 60%;
-          max-width: 600px;
+          max-width: 700px;
           width: 100%;
           height: auto;
-          align-self: center;
           display: block;
+          margin: 0 auto;
+          align-self: center;
         }
 
         #artworkname {
@@ -125,13 +125,13 @@ h1, #lefttext, #righttext {
         #artworknamekr {
           font-weight: bold;
           font-size: clamp(16pt, 3vw, 22pt);
-          margin-bottom: 10px;
+          margin-left: 50px;
         }
 
         #artworknameen {
           font-weight: normal;
           font-size: clamp(12pt, 3vw, 16pt);
-          margin: 0;
+          margin-left: 50px;
         }
 
         #etc {
@@ -140,8 +140,8 @@ h1, #lefttext, #righttext {
 
         .material {
           font-weight: normal;
-          font-size: clamp(10pt, 1.8vw, 18pt);
-          line-height: 1;
+          font-size: clamp(10pt, 1.8vw, 13pt);
+          line-height: 1.3;
         }
 
         #articlekr {
@@ -156,7 +156,7 @@ h1, #lefttext, #righttext {
         }
 
         #button {
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: sans-serif;
             font-size: clamp(10pt, 1.8vw, 18pt);
             text-decoration: none;
             display: inline-block;
@@ -177,13 +177,13 @@ footer {
 }
 
 #footertitle{
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
   font-size: clamp(10pt, 1vw, 16pt);
 }
 
 #name {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: sans-serif;
   font-weight: regular;
   font-size: 12pt;
   margin-top: 8px;
@@ -199,36 +199,13 @@ footer {
   text-decoration: underline;
 } 
 
-
-@media screen and (max-width: 768px) {
-  body {
-    padding: 0 20px;
-  }
-
-    #head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-    #content {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
   </style>
 </head>
 
 
 
 <body>
-<header> <!--메인페이지로 가는 header-->
+<!--메인페이지로 가는 header-->
 <div class="header">
     <h1 style="float: left;">
     <a href="https://woojinnchoi.github.io/backtothefuture/" style="color: inherit; text-decoration: none;">
@@ -242,7 +219,6 @@ html, body {
   </h1>
   <div style="clear: both;"></div>
   </div>
-</header>
 
   <section id="mainbox">
           <!--타이틀 제목-->
@@ -258,13 +234,13 @@ html, body {
           <section id="content">
                 <div id="article">
                     <div id="artworkname">
-                      <p id="artworknamekr">공성훈, <블라인드 작업>, 1992</p>
-                      <p id="artworknameen">KONG Sunghun, <i>Blind-work</i>, 1992</p>
+                      <div id="artworknamekr">공성훈, <블라인드 작업>, 1992</div>
+                      <div id="artworknameen">KONG Sunghun, <i>Blind-work</i>, 1992</div>
                     </div>
 
                     <div id="etc">
-                      <p class="material">블라인드 4개, 페인트, 알루미늄 테이프, 모터</p>
-                      <p class="material">100X100X(4)</p>
+                      <div class="material">블라인드 4개, 페인트, 알루미늄 테이프, 모터</div>
+                      <div class="material">100X100X(4)</div>
                     </div>
 
                     <div id="articlekr">

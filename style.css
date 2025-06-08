@@ -1,9 +1,8 @@
-    body {
+   body {
+      max-width: 1920px;
       font-family: sans-serif;
       color: black;
       margin-bottom: 100px;
-      padding-left: 20px;
-      padding-right: 20px;
     }
 
 /* 마우스 호버효과 없애기 */
@@ -23,35 +22,32 @@ a {
     background-color: #a9a9a9 !important;
 }
 
-  #articleen {
-    color: #7c7c7c !important;
-}
-
 }
 
 
-/* header */ 
-.header 
-    { max-width: 1640px;    /* 제목 여백 설정 */
-      margin-top: 23px;   /* 제목 상단 여백 */
-      margin-left: auto;    /* 좌우 여백 */
-      margin-right: auto;   /* 좌우 여백 */
+    /* header */ 
+    .header 
+        { max-width: 1640px;    /* 제목 여백 설정 */
+          margin-top: 23px;   /* 제목 상단 여백 */
+          margin-left: auto;    /* 좌우 여백 */
+          margin-right: auto;   /* 좌우 여백 */
+          overflow: hidden;
+        }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 34pt);
+      font-weight: bold;
+      letter-spacing: -0.02em;
+      margin: 0;
     }
-
-h1, #lefttext, #righttext {
-  font-size: clamp(24px, 4vw, 34pt);
-  font-weight: bold;
-  letter-spacing: -0.02em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
 
 /* 본문 박스 */
 #mainbox {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20pt;
 }
 
 
@@ -62,10 +58,11 @@ h1, #lefttext, #righttext {
 }
 
 #titlekr {
-  font-size: clamp(20px, 3vw, 25pt);
-  font-weight: bold;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
+      font-size: clamp(20px, 3vw, 25pt);
+      font-weight: bold;
+      letter-spacing: -0.02em;
+      margin-top: 64px;
+      margin-bottom: 0;
 }
 
 #titlelinebox {
@@ -75,12 +72,12 @@ h1, #lefttext, #righttext {
 }
 
 #titleen {
-  font-size: clamp(18px, 2.5vw, 20pt);
-  font-weight: 500;
-  font-family: Helvetica, sans-serif;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  margin-top: -5px;
+      font-size: clamp(18px, 2.5vw, 20pt);
+      font-weight: 500;
+      font-family: Helvetica, sans-serif;
+      letter-spacing: -0.02em;
+      margin-top: 5px;
+      margin-bottom: 0;
 }
 
 #titleline {
@@ -103,20 +100,16 @@ h1, #lefttext, #righttext {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  flex: 1 1 50%;
+  flex: 1;
   min-width: 100px;
 }
 
 #articlekr {
-   font-size: clamp(16px, 2vw, 20pt);
-    font-weight: 500;
-    text-align: justify; /* 균등배치 */
-    letter-spacing: -0.015em;
-    line-height: 1.6;
-    margin-top: 0;
-    margin-bottom: 20px;
-    flex: 1 1 60%;
-    max-width: 800px;
+      font-size: clamp(16px, 2vw, 20pt);
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: -0.5px;
+      margin: 0;
 }
 
 #articleen {
@@ -126,7 +119,7 @@ h1, #lefttext, #righttext {
       font-weight: 400;
       line-height: 1.6;
       letter-spacing: -0.015em;
-      flex: 1 1 40%;
+      flex: 1;
       max-width: 600px;
       color: #454545;
 }
@@ -151,7 +144,6 @@ h1, #lefttext, #righttext {
   font-size: clamp(9pt, 1.1vw, 12pt);
   font-weight: 500;
   color: #555;
-  font-family: 'Noto Sans KR', sans-serif;
   margin-right: 15px;
 }
 
@@ -244,7 +236,6 @@ h1, #lefttext, #righttext {
 }
 
 #artworknamekr1, #artworknamekr2, #artworknamekr3 {
-  font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
   font-size: clamp(13pt, 3vw, 20pt);
   text-align: center;
@@ -252,7 +243,6 @@ h1, #lefttext, #righttext {
 }
 
 .artworknameen {
-  font-family: 'Noto Sans KR', sans-serif;
   font-weight: normal;
   font-size: clamp(10pt, 1.2vw, 16pt);
   text-align: center;
@@ -271,14 +261,12 @@ footer {
 }
 
 #footertitle{
-  font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
   font-size: clamp(10pt, 1vw, 16pt);
 
 }
 
 #name {
-  font-family: 'Noto Sans KR', sans-serif;
   font-weight: regular;
   font-size: 12pt;
   margin-top: 8px;

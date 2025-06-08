@@ -1,100 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
   <title>최정화, 내일의 꽃</title>
   <style>
-body {
-  padding-left: 20px;
-  padding-right: 20px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 12pt;
-}
-
-      /* 마우스 호버효과 없애기 */
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      /* 다크모드 */
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #111;
-          color:#a9a9a9;
-        }
-
-        #titleline {
-          background-color: #a9a9a9 !important;
-      }
-
-        #articleen {
-          color: #7c7c7c !important;
-      }
-
-      }
-
-
-/* header */ 
-.header 
-    { max-width: 1640px;    /* 제목 여백 설정 */
-      margin-top: 23px;   /* 제목 상단 여백 */
-      margin-left: auto;    /* 좌우 여백 */
-      margin-right: auto;   /* 좌우 여백 */
+    body {
+      max-width: 1920px;
+      font-family: sans-serif;
+      color: black;
+      margin-bottom: 100px;
+      margin:0 20px;
     }
 
-h1, #lefttext, #righttext {
-  font-size: clamp(24px, 4vw, 34pt);
-  font-weight: bold;
-  letter-spacing: -0.02em;
-  margin-top: 0;
-  margin-bottom: 0;
-  white-space: normal; /* 줄바꿈 허용해주는 코드*/
-  word-break: keep-all; /* 단어가 분리되는 거 방지하는거 */
-  overflow-wrap: break-word; /* 넘치면 줄바꿈을 해도 괜찮다는 코드*/
+/* 마우스 호버효과 없애기 */
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+/* 다크모드 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color:#a9a9a9;
+  }
+
+  #titleline {
+    background-color: #a9a9a9 !important;
+}
+
+}
+
+
+    /* header */ 
+    .header 
+        { max-width: 1640px;    /* 제목 여백 설정 */
+          margin-top: 23px;   /* 제목 상단 여백 */
+          margin-left: auto;    /* 좌우 여백 */
+          margin-right: auto;   /* 좌우 여백 */
+          overflow: hidden;
+        }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 34pt);
+      font-weight: bold;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
 
 /* 본문 박스 */
 #mainbox {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20pt;
 }
 
-    /* title */
-    #title {
-        margin-top: 64px;
-        margin-bottom: 40px;
-    }
 
-    #titlekr {
+/* title */
+#title {
+    margin-top: 64px;
+    margin-bottom: 70px;
+}
+
+#titlekr {
       font-size: clamp(20px, 3vw, 25pt);
       font-weight: bold;
-      line-height: 1.4;
       letter-spacing: -0.02em;
-    }
+      margin-top: 64px;
+      margin-bottom: 0;
+}
 
-    #titlelinebox {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
+#titlelinebox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-    #titleen {
+#titleen {
       font-size: clamp(18px, 2.5vw, 20pt);
       font-weight: 500;
       font-family: Helvetica, sans-serif;
-      line-height: 1.5;
       letter-spacing: -0.02em;
-      margin-top: -5px;
-    }
+      margin-top: 5px;
+      margin-bottom: 0;
+}
 
-    #titleline {
-      flex-grow: 1; /* 남은 공간 채우기 */
-      height: 1.5px;
-      background-color: black;
-    }
+#titleline {
+  flex-grow: 1; /* 남은 공간 채우기 */
+  height: 1.5px;
+  background-color: black;
+}
 
     /* 내용 */ 
     #content {
@@ -102,6 +99,7 @@ h1, #lefttext, #righttext {
       flex-wrap: wrap;
       width: 100%;
       align-items: flex-start;
+      margin-top: 0;
       margin-bottom: 100px;
       max-width: 1440px;
       gap: 40px;
@@ -113,11 +111,12 @@ h1, #lefttext, #righttext {
 
         #image {
           flex: 1 1 60%;
-          max-width: 600px;
+          max-width: 700px;
           width: 100%;
           height: auto;
-          align-self: center;
           display: block;
+          margin: 0 auto;
+          align-self: center;
         }
 
         #artworkname {
@@ -127,13 +126,13 @@ h1, #lefttext, #righttext {
         #artworknamekr {
           font-weight: bold;
           font-size: clamp(16pt, 3vw, 22pt);
-          margin-bottom: 10px;
+          margin-left: 50px;
         }
 
         #artworknameen {
           font-weight: normal;
           font-size: clamp(12pt, 3vw, 16pt);
-          margin: 0;
+          margin-left: 50px;
         }
 
         #etc {
@@ -142,8 +141,8 @@ h1, #lefttext, #righttext {
 
         .material {
           font-weight: normal;
-          font-size: clamp(10pt, 1.8vw, 18pt);
-          line-height: 1;
+          font-size: clamp(10pt, 1.8vw, 13pt);
+          line-height: 1.3;
         }
 
         #articlekr {
@@ -158,7 +157,7 @@ h1, #lefttext, #righttext {
         }
 
         #button {
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: sans-serif;
             font-size: clamp(10pt, 1.8vw, 18pt);
             text-decoration: none;
             display: inline-block;
@@ -179,13 +178,13 @@ footer {
 }
 
 #footertitle{
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
   font-size: clamp(10pt, 1vw, 16pt);
 }
 
 #name {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: sans-serif;
   font-weight: regular;
   font-size: 12pt;
   margin-top: 8px;
@@ -200,28 +199,6 @@ footer {
   line-height: 1;
   text-decoration: underline;
 } 
-
-@media screen and (max-width: 768px) {
-  body {
-    padding: 0 20px;
-  }
-
-    #head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-    #content {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-}
-
-html, body {
-  overflow-x: hidden;
-}
 
   </style>
 </head>
@@ -256,13 +233,13 @@ html, body {
           <section id="content">
                 <div id="article">
                     <div id="artworkname">
-                      <p id="artworknamekr">최정화, <내일의 꽃>, 2015</p>
-                      <p id="artworknameen"> CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</p>
+                      <div id="artworknamekr">최정화, <내일의 꽃>, 2015</div>
+                      <div id="artworknameen"> CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</div>
                   </div>
 
                   <div id="etc">
-                    <p class="material">섬유, FRP, 고무, 우레아, 철 분말</p>
-                    <p class="material">163.5×130×128, 220×203×188, 114×96×111, 161×120×104, 201×130×133, 230×114×128, 69×208×208, 132×130×129, 248×171×149, 230×147×156, 199×68×76, 155×60×35, 143×48×47</p>
+                    <div class="material">섬유, FRP, 고무, 우레아, 철 분말</div>
+                    <div class="material">163.5×130×128, 220×203×188, 114×96×111, 161×120×104, 201×130×133, 230×114×128, 69×208×208, 132×130×129, 248×171×149, 230×147×156, 199×68×76, 155×60×35, 143×48×47</div>
                   </div>
 
                   <div id="articlekr">
