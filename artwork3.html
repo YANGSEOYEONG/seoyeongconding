@@ -5,13 +5,12 @@
   <meta charset="utf-8" />
   <title>박이소, 역사의 문</title>
   <style>
-      body {
-      max-width: 1920px;
-      margin: 0 auto;
-      padding: 0 140px;
-      font-family: 'Noto Sans KR', sans-serif;
-      font-size: 12pt;
-    }
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12pt;
+}
 
       /* 마우스 호버효과 없애기 */
       a {
@@ -37,6 +36,7 @@
       }
 
 
+/* header */ 
 .header 
     { max-width: 1640px;    /* 제목 여백 설정 */
       margin-top: 23px;   /* 제목 상단 여백 */
@@ -47,6 +47,7 @@
 h1, #lefttext, #righttext {
   font-size: clamp(24px, 4vw, 34pt);
   font-weight: bold;
+  letter-spacing: -0.02em;
   margin-top: 0;
   margin-bottom: 0;
   white-space: normal; /* 줄바꿈 허용해주는 코드*/
@@ -200,11 +201,6 @@ footer {
   text-decoration: underline;
 } 
 
-@media screen and (max-width: 1440px) {
-  body {
-    padding: 0 60px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   body {

@@ -1,10 +1,10 @@
-body {
-  max-width: 1920px;
-  margin: 0 auto; /*중앙정렬*/
-  padding: 0 140px; /*좌우 여백*/
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 12pt;
-}
+    body {
+      font-family: sans-serif;
+      color: black;
+      margin-bottom: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
 /* 마우스 호버효과 없애기 */
 a {
@@ -41,11 +41,9 @@ a {
 h1, #lefttext, #righttext {
   font-size: clamp(24px, 4vw, 34pt);
   font-weight: bold;
+  letter-spacing: -0.02em;
   margin-top: 0;
   margin-bottom: 0;
-  white-space: normal; /* 줄바꿈 허용해주는 코드*/
-  word-break: keep-all; /* 단어가 분리되는 거 방지하는거 */
-  overflow-wrap: break-word; /* 넘치면 줄바꿈을 해도 괜찮다는 코드*/
 }
 
 
@@ -295,13 +293,6 @@ footer {
   line-height: 1;
   text-decoration: underline;
 } 
-
-
-@media screen and (max-width: 1440px) {
-  body {
-    padding: 0 60px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   body {

@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <title>공성훈, 블라인드작업</title>
   <style>
-      body {
-      max-width: 1920px;
-      margin: 0 auto;
-      padding: 0 140px;
-      font-family: 'Noto Sans KR', sans-serif;
-      font-size: 12pt;
+    body {
+      font-family: sans-serif;
+      color: black;
+      margin-bottom: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
       /* 마우스 호버효과 없애기 */
@@ -37,6 +37,7 @@
       }
 
 
+/* header */ 
 .header 
     { max-width: 1640px;    /* 제목 여백 설정 */
       margin-top: 23px;   /* 제목 상단 여백 */
@@ -47,11 +48,8 @@
 h1, #lefttext, #righttext {
   font-size: clamp(24px, 4vw, 34pt);
   font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0;
-  white-space: normal; /* 줄바꿈 허용해주는 코드*/
-  word-break: keep-all; /* 단어가 분리되는 거 방지하는거 */
-  overflow-wrap: break-word; /* 넘치면 줄바꿈을 해도 괜찮다는 코드*/
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
 /* 본문 박스 */
@@ -101,6 +99,7 @@ h1, #lefttext, #righttext {
       flex-wrap: wrap;
       width: 100%;
       align-items: flex-start;
+      margin-top: 0;
       margin-bottom: 100px;
       max-width: 1440px;
       gap: 40px;
@@ -200,11 +199,6 @@ footer {
   text-decoration: underline;
 } 
 
-@media screen and (max-width: 1440px) {
-  body {
-    padding: 0 60px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   body {
