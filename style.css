@@ -257,13 +257,13 @@ footer {
 
 #footertitle{
   font-weight: bold;
-  font-size: clamp(10pt, 1vw, 16pt);
+  font-size: clamp(11pt, 1vw, 16pt);
 
 }
 
 #name {
   font-weight: regular;
-  font-size: 12pt;
+  font-size: clamp(8pt, 1vw, 12pt);
   margin-top: 8px;
   display:flex;
   justify-content: center;
@@ -272,7 +272,7 @@ footer {
 }
 
 #name > #ysy{
-  font-size: 14pt;
+  font-size: clamp(10pt, 1vw, 14pt);
   line-height: 1;
   text-decoration: underline;
 } 

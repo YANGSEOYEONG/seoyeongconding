@@ -177,7 +177,7 @@ footer {
 #name {
   font-family: sans-serif;
   font-weight: regular;
-  font-size: 12pt;
+  font-size: clamp(8pt, 1vw, 12pt);
   margin-top: 8px;
   display:flex;
   justify-content: center;
@@ -186,14 +186,18 @@ footer {
 }
 
 #name > #ysy{
-  font-size: 14pt;
+  font-size: clamp(10pt, 1vw, 14pt);
   line-height: 1;
   text-decoration: underline;
 } 
 
   @media screen and (max-width: 768px) {
   body {
-    margin: 0 20px;
+    padding: 0 20px;
+  }
+
+  #mainbox{
+    padding: 0 10px;
   }
 
 }
