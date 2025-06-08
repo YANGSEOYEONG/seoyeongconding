@@ -282,6 +282,10 @@ footer {
     padding: 0 20px;
   }
 
+   #mainbox{
+padding: 0 10px
+   }
+
   #article {
     flex-direction: column;
     gap: 40px; /* 좌우 간격 대신 위아래 간격 */
