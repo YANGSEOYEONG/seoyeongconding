@@ -110,7 +110,7 @@ a {
 }
 
 #articlekr {
-   font-size: clamp(16px, 2vw, 20pt);
+   font-size: clamp(16pt, 2vw, 20pt);
     font-weight: 500;
     text-align: justify; /* 균등배치 */
     letter-spacing: -0.015em;
@@ -147,10 +147,6 @@ a {
 
 #rogo:hover {
     filter: grayscale(0%);
-}
-
-#audioguide {
-  align-items: center;
 }
 
 #audiotext {
@@ -197,32 +193,12 @@ a {
 }
 
 /* 이미지 마우스 호버 효과 */ 
-#image1c:hover {
+#image1c:hover, #image2c:hover, #image3c:hover {
     filter: grayscale(0%); 
     transform: scale(1.05);
 }
 
-#image2c:hover {
-    filter: grayscale(0%); 
-    transform: scale(1.05);
-
-}
-#image3c:hover {
-    filter: grayscale(0%); 
-    transform: scale(1.05);
-}
-
-#artworknamekr1:hover {
-  transform: scale(1.03);
-  text-decoration: underline;
-}
-
-#artworknamekr2:hover {
-  transform: scale(1.03);
-  text-decoration: underline;
-}
-
-#artworknamekr3:hover {
+#artworknamekr1:hover, #artworknamekr2:hover, #artworknamekr3:hover {
   transform: scale(1.03);
   text-decoration: underline;
 }
@@ -324,24 +300,18 @@ footer {
 @media screen and (max-width: 1440px) {
   body {
     padding: 0 60px;
-    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   body {
-    padding: 0 16px;
-    margin: 0 auto;
+    padding: 0 20px;
   }
 
     #head {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-  }
-
-    #leftright, #righttext {
-    font-size: clamp(14pt, 4vw, 28pt);
   }
 
     #article {
