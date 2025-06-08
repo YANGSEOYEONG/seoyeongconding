@@ -37,19 +37,18 @@
       }
 
 
-/* header */ 
-#head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1640px;
-  margin: 23px auto 0 auto;
-}
+.header 
+    { max-width: 1640px;    /* 제목 여백 설정 */
+      margin-top: 23px;   /* 제목 상단 여백 */
+      margin-left: auto;    /* 좌우 여백 */
+      margin-right: auto;   /* 좌우 여백 */
+    }
 
-#lefttext, #righttext {
+h1, #lefttext, #righttext {
   font-size: clamp(24px, 4vw, 34pt);
   font-weight: bold;
-  flex: none;
+  margin-top: 0;
+  margin-bottom: 0;
   white-space: normal; /* 줄바꿈 허용해주는 코드*/
   word-break: keep-all; /* 단어가 분리되는 거 방지하는거 */
   overflow-wrap: break-word; /* 넘치면 줄바꿈을 해도 괜찮다는 코드*/
@@ -234,14 +233,21 @@ html, body {
 
 
 <body>
-  <header> <!--메인페이지로 가는 header-->
-    <a href="https://woojinnchoi.github.io/backtothefuture/">
-      <div id="head">
-        <div id="lefttext">백 투 더 퓨처:</div>
-        <div id="righttext">한국 현대미술의 동시대성 탐험기</div>
-      </div>
+<header> <!--메인페이지로 가는 header-->
+<div class="header">
+    <h1 style="float: left;">
+    <a href="https://woojinnchoi.github.io/backtothefuture/" style="color: inherit; text-decoration: none;">
+      백 투 더 퓨처:
     </a>
-  </header>
+  </h1>
+  <h1 style="float: right;">
+    <a href="https://woojinnchoi.github.io/backtothefuture/" style="color: inherit; text-decoration: none;">
+      한국 현대미술의 동시대성 탐험기
+    </a>
+  </h1>
+  <div style="clear: both;"></div>
+  </div>
+</header>
 
   <section id="mainbox">
         <section id="title">
@@ -287,4 +293,5 @@ html, body {
             </footer>
   </section>
 </body>
+
 </html>
