@@ -2,14 +2,15 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta charset="utf-8"/>
+        <!--이름은 꼭 viewport여야 함, 디바이스 너비에 맞춰서 내용을 보여주고, 처음 로드될 때 화면을 100% 크기로 확대/축소 없이 보여지게 함-->
+        <meta charset="utf-8"/> <!--한글깨짐 방지 문자 인코딩-->
         <title>시대 변환과 미술 지형 변동</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style.css"/> <!--외부 css 연결하기-->
     </head>
 
-    <body>
 
-<header>
+    <body> <!--body 시작하기-->
+<header> <!--메인페이지로 가는 header-->
   <a href="index.html">
     <div id="head">
       <div id="lefttext">백 투 더 퓨처:</div>
@@ -19,12 +20,12 @@
 </header>
 
 
-<section id="mainbox">
+<section id="mainbox"> <!--내용 시작 박스-->
     <!--타이틀 제목-->
     <section id="title">
             <div id="titlekr">시대 변환과 미술 지형 변동</div>
 
-            <div id="titlelinebox">
+            <div id="titlelinebox"> <!--영어타이틀 + 라인선-->
             <span id="titleen">A New Era of Diversion, and Paradigm Shift in Art</span>
             <div id="titleline"> </div>
             </div>
@@ -32,7 +33,7 @@
     
     <!--본문-->
             <section id="article">
-                <div id="articleleft">
+                <div id="articleleft"> <!--왼쪽정렬되는 글-->
                     <div id="articlekr">
                     1990년대를 관통하여 2000년대로 이어지는 이 시기의 미술은 마치 지각변동과도 같은 전 세계적 체질 변화 상황과
                     이와 연관된 한국의 사회 환경을 그대로 흡수했다. 그래서 동시대 한국 현대미술은 보편적이면서 특징적이고, 전
@@ -51,7 +52,7 @@
                         <img id="rogo" src="images/rogo.png" alt="로고">
                     </div>
 
-                        <audio id="mainsound" src="audio/audio1.mp3"></audio>
+                    <audio id="mainsound" src="audio/audio1.mp3"></audio>
                     
                 </div>
 
@@ -74,43 +75,49 @@
             </section>
 
 
-<section id="artworks">
-  <!-- 작품1 -->
-          <div id="artwork-group1">
-            <div id="artwork-name1" class="artwork-name">
-                <a href="artwork1.html">
-                <p id="artworknamekr1">공성훈, <블라인드 작업>, 1992</p> </a>
-                <p class="artworknameen">KONG Sunghun, <i>Blind-work</i>, 1992</p>
-            </div>
-              <a href="artwork1.html">
-                <img id="image1c" src="images/image1c.png" alt="공성훈, 블라인드작업">
-              </a>
-          </div>
+            <section id="artworks">
+                      <!-- 작품1 -->
+                      <div id="artwork-group1">
+                        <div id="artwork-name1" class="artwork-name">
+                            <a href="artwork1.html">
+                              <p id="artworknamekr1">공성훈, <블라인드 작업>, 1992</p> 
+                            </a>
+                            <p class="artworknameen">KONG Sunghun, <i>Blind-work</i>, 1992</p>
+                        </div>
 
-          <!-- 작품2 -->
-          <div id="artwork-group2">
-            <div id="artwork-name2" class="artwork-name">
-                <a href="artwork2.html">
-                <p id="artworknamekr2">최정화, <내일의 꽃>, 2015</p></a>
-                <p class="artworknameen">CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</p>
-            </div>
-                <a href="artwork2.html">
-                  <img id="image2c" src="images/image2c.png" alt="최정화, 내일의 꽃">
-                </a>
-          </div>
+                          <a href="artwork1.html">
+                            <img id="image1c" src="images/image1c.png" alt="공성훈, 블라인드작업">
+                          </a>
+                      </div>
 
-          <!-- 작품3 -->
-          <div id="artwork-group3">
-            <div id="artwork-name3" class="artwork-name">
-                <a href="artwork3.html">
-                <p id="artworknamekr3">박이소, <역사의 문/역사적인 문>, 2015</p></a>
-                <p class="artworknameen">BAHC Yiso, <i>Entrance of History</i>, 1987</p>
-            </div>
-                <a href="artwork3.html">
-                  <img id="image3c" src="images/image3c.png" alt="박이소, 역사의 문">
-                </a>
-              </div>
-</section>
+                      <!-- 작품2 -->
+                      <div id="artwork-group2">
+                        <div id="artwork-name2" class="artwork-name">
+                            <a href="artwork2.html">
+                              <p id="artworknamekr2">최정화, <내일의 꽃>, 2015</p>
+                            </a>
+                            <p class="artworknameen">CHOI Jeonghwa, <i>Flowers of Tomorrow</i>, 2015</p>
+                        </div>
+                            
+                          <a href="artwork2.html">
+                              <img id="image2c" src="images/image2c.png" alt="최정화, 내일의 꽃">
+                          </a>
+                      </div>
+
+                      <!-- 작품3 -->
+                      <div id="artwork-group3">
+                        <div id="artwork-name3" class="artwork-name">
+                            <a href="artwork3.html">
+                              <p id="artworknamekr3">박이소, <역사의 문/역사적인 문>, 2015</p>
+                            </a>
+                            <p class="artworknameen">BAHC Yiso, <i>Entrance of History</i>, 1987</p>
+                        </div>
+                            
+                            <a href="artwork3.html">
+                              <img id="image3c" src="images/image3c.png" alt="박이소, 역사의 문">
+                            </a>
+                          </div>
+            </section>
 
         <footer>
             <div id="footertitle">제작</div>
