@@ -1,9 +1,9 @@
-   body {
-    max-width: 1920px;
-    padding: 0 100px;
-    margin: 0 auto;
+    body {
       font-family: sans-serif;
       color: black;
+      margin: 0 auto;
+      padding-left: 20px;   
+      padding-right: 20px;    
     }
 
 /* 마우스 호버효과 없애기 */
@@ -32,7 +32,8 @@ a {
 
     /* header */ 
     .header 
-        { margin-top: 23px;   /* 제목 상단 여백 */
+        { max-width: 1640px; 
+          margin-top: 23px;   /* 제목 상단 여백 */
           margin-left: auto;
           margin-right:auto;
           overflow: hidden;
@@ -48,6 +49,7 @@ a {
 
 /* 본문 박스 */
 #mainbox {
+      max-width: 1440px;
       padding: 0 50px;
       margin: 0 auto;
 }
